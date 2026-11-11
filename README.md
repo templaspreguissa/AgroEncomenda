@@ -89,11 +89,11 @@ Não há framework, gerenciador de pacotes, etapa de build ou configuração de 
 2. Abra a pasta `src`.
 3. Abra `index.html` em um navegador atualizado.
 
-Nesta versão organizada, o código já está descompactado. Caso esteja usando a versão original do repositório, extraia primeiro `AgroEncomenda/agroencomenda.zip` e abra o `index.html` da pasta extraída.
+O código está disponível diretamente na pasta [src/](src/), sem ZIP interno. Abra os arquivos para visualizar ou editar HTML, CSS e JavaScript pelo GitHub ou pelo seu editor.
 
 ### Opção 2 — servidor local com Python
 
-Com Python 3 instalado, execute na raiz desta versão organizada:
+Com Python 3 instalado, execute na raiz do projeto:
 
 ```bash
 python -m http.server 8000 --bind 127.0.0.1 --directory src
@@ -127,11 +127,11 @@ Consulte o [roteiro de verificação manual](docs/TESTES.md) para outros cenári
 ## Estrutura do repositório
 
 ```text
-AgroEncomenda-organizado/
+AgroEncomenda/
 ├── README.md                   # Apresentação e guia principal
-├── LICENSE                     # Licença MIT original
+├── LICENSE                     # Licença MIT
 ├── CONTRIBUTING.md             # Orientações de contribuição
-├── src/              # Código extraído do ZIP original
+├── src/                       # Código-fonte da aplicação
 │   ├── index.html              # Telas e formulários
 │   ├── style.css               # Estilos e responsividade
 │   ├── script.js               # Dados e lógica da demonstração
@@ -139,14 +139,13 @@ AgroEncomenda-organizado/
 ├── docs/
 │   ├── ARQUITETURA.md          # Organização do código e modelo de dados
 │   └── TESTES.md               # Roteiro manual e resultados esperados
-└── AgroEncomenda/              # Materiais originais preservados
+└── AgroEncomenda/              # Diagramas e documentação acadêmica
     ├── Diagrama de caso de uso.jpg
     ├── Entidade de Relacionamento.jpg
     ├── Dicionário de Dados.pdf
     ├── Documentação Banco de Dados AgroEncomenda.pdf
     ├── Modelo Relacional + Normalização (3FN).pdf
-    ├── agroencomenda-todas-as-paginas (1).pdf
-    └── agroencomenda.zip
+    └── agroencomenda-todas-as-paginas (1).pdf
 ```
 
 ## Arquitetura e dados
@@ -178,7 +177,6 @@ Mais detalhes e divergências a conciliar estão em [Arquitetura](docs/ARQUITETU
 | [Documentação do banco](AgroEncomenda/Documenta%C3%A7%C3%A3o%20Banco%20de%20Dados%20AgroEncomenda.pdf) | Tabelas, tipos, chaves e relacionamentos. |
 | [Modelo relacional e 3FN](AgroEncomenda/Modelo%20Relacional%20%2B%20Normaliza%C3%A7%C3%A3o%20%283FN%29.pdf) | Mapeamento relacional e critérios de normalização. |
 | [Apresentação das telas](AgroEncomenda/agroencomenda-todas-as-paginas%20%281%29.pdf) | Registro visual de 12 páginas da demonstração. |
-| [Código original compactado](AgroEncomenda/agroencomenda.zip) | Arquivo original preservado para referência. |
 
 ## Limitações atuais
 
@@ -210,10 +208,10 @@ Esta lista é uma proposta de evolução, não um compromisso de entrega.
 
 Consulte [CONTRIBUTING.md](CONTRIBUTING.md) para propor melhorias e relatar problemas.
 
-Repositório de origem mantido por [mateus-dutra7](https://github.com/mateus-dutra7): [AgroEncomenda](https://github.com/mateus-dutra7/AgroEncomenda).
+Repositório principal do projeto: [templaspreguissa/AgroEncomenda](https://github.com/templaspreguissa/AgroEncomenda). O desenvolvimento e a colaboração da equipe são centralizados aqui.
 
-Contexto acadêmico: **Trabalho A3 de Projeto e Engenharia de Software**, conforme a apresentação do próprio protótipo. Outros integrantes, instituição e professor não foram identificados nos materiais consultados.
+Contexto acadêmico: **Trabalho A3 de Projeto e Engenharia de Software**.
 
 ## Licença
 
-Distribuído sob a [licença MIT](LICENSE). Copyright © 2026 mateus-dutra7, conforme o arquivo original.
+Distribuído sob a [licença MIT](LICENSE).

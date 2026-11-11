@@ -59,8 +59,8 @@ Todas apresentam `id` como chave primária nos documentos. A normalização desc
 5. **Campos não persistidos:** observações do pedido e mensagem da oferta de encomenda aparecem nos formulários, mas não são guardadas no objeto criado pelo JavaScript.
 6. **Identificação:** alguns vínculos do protótipo usam nomes de produtores. Uma implementação persistente deve estabelecer relações por identificadores.
 
-Consulte os [materiais originais](../README.md#documentação) para comparar o modelo completo.
+Consulte os [documentos do projeto](../README.md#documentação) para comparar o modelo completo.
 
-## Escopo desta organização
+## Organização do projeto
 
-O código HTML, CSS e JavaScript foi extraído do ZIP original sem alterações funcionais. Os documentos de origem e a licença foram preservados. A documentação foi ampliada com base na leitura dos arquivos; isso não equivale a uma homologação funcional em navegador.
+O código HTML, CSS e JavaScript fica disponível diretamente em `src/`. Os diagramas e PDFs estão em `AgroEncomenda/`, e os guias técnicos em `docs/`. Este repositório centraliza o desenvolvimento e a documentação da equipe. O roteiro de testes descreve verificações a executar; não equivale a uma homologação funcional em navegador.

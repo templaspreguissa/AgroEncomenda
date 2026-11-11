@@ -13,7 +13,7 @@ Abra uma issue no repositório, se o recurso estiver habilitado, com:
 
 ## Propor uma alteração
 
-1. Faça um fork e clone sua cópia do repositório.
+1. Clone o repositório principal. Se você não tiver permissão de escrita, faça um fork e clone sua cópia.
 2. Crie uma branch com um nome descritivo, como `docs/guia-instalacao` ou `fix/validacao-pedido`.
 3. Execute o protótipo conforme o README.
 4. Faça alterações focadas no problema proposto, preservando a identidade e as convenções do projeto.
@@ -28,7 +28,7 @@ Abra uma issue no repositório, se o recurso estiver habilitado, com:
 - Evite novas dependências para mudanças simples.
 - Use dados fictícios nos exemplos e não inclua credenciais.
 - Explique mudanças nas regras de negociação e no modelo de dados.
-- Ao alterar o código extraído, trate `src/` como a versão de trabalho. O ZIP em `AgroEncomenda/` é uma cópia histórica e não é atualizado automaticamente.
+- Edite o código diretamente em `src/`. Mantenha os arquivos descompactados para facilitar a revisão e a colaboração.
 
 ## Checklist do pull request
 
