@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroEncomenda — Do produtor para o comércio e para a sua mesa</title>
+    <meta name="description" content="AgroEncomenda conecta produtores rurais, comércios e consumidores do Triângulo Mineiro. Projeto acadêmico de demonstração.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='16' fill='%231f4d36'/><path d='M16 25V12M16 17c-4 0-6-3-6-6 4 0 6 3 6 6zm0-2c0-4 2-7 6-7 0 4-2 7-6 7z' stroke='%23f3ead8' stroke-width='2' fill='none'/></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <div class="container">
+            <a href="#" class="logo" data-pagina="inicio">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16"/><path d="M16 25V12M16 17c-4 0-6-3-6-6 4 0 6 3 6 6zm0-2c0-4 2-7 6-7 0 4-2 7-6 7z"/></svg>
+                Agro<span>Encomenda</span>
+            </a>
+            <nav class="navegacao">
+                <a href="#" data-pagina="inicio">Início</a>
+                <a href="#" data-pagina="produtos">Produtos</a>
+                <a href="#" data-pagina="produtores">Produtores</a>
+                <a href="#" data-pagina="encomendas">Encomendas</a>
+            </nav>
+            <div class="botoes-cabecalho" id="area-usuario">
+                <a href="#" class="btn btn-secundario" id="btn-entrar" data-pagina="entrar">Entrar</a>
+                <a href="#" class="btn btn-primario" id="btn-cadastrar" data-pagina="cadastrar">Criar conta</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Dinâmico -->
+    <main id="conteudo-principal">
+        <!-- PÁGINA INÍCIO -->
+        <section class="pagina ativa" id="pagina-inicio">
+            <div class="hero">
+                <div class="container hero-grade">
+                    <div class="hero-conteudo">
+                        <p class="selo-regiao"><span class="ponto"></span> Triângulo Mineiro · Uberaba e região</p>
+                        <h1>Do produtor para o comércio <em>e para a sua mesa</em></h1>
+                        <p class="hero-subtitulo">Quem produz mostra o que tem. Mercados, restaurantes e distribuidores encontram fornecedores da região. Quem compra para casa chega direto ao produtor — sem atravessador.</p>
+                        <div class="hero-botoes">
+                            <a href="#" class="btn btn-primario btn-grande" data-pagina="cadastrar" data-tipo="produtor">Sou produtor</a>
+                            <a href="#" class="btn btn-secundario btn-grande" data-pagina="cadastrar" data-tipo="comercio">Tenho um comércio</a>
+                        </div>
+                        <a href="#" class="link-consumidor" data-pagina="produtos">Quero comprar direto do produtor <span aria-hidden="true">→</span></a>
+                    </div>
+
+                    <aside class="quadro-feira" aria-label="Cotações do dia">
+                        <div class="quadro-topo">
+                            <span>Quadro da feira</span>
+                            <span class="quadro-data">7 out. 2026</span>
+                        </div>
+                        <ul class="quadro-lista" id="quadro-precos"></ul>
+                        <p class="quadro-rodape">Preço ao consumidor · direto do sítio</p>
+                    </aside>
+                </div>
+
+                <div class="container">
+                    <dl class="numeros">
+                        <div><dt id="num-produtores">0</dt><dd>produtores com vitrine</dd></div>
+                        <div><dt id="num-produtos">0</dt><dd>produtos publicados</dd></div>
+                        <div><dt id="num-cidades">0</dt><dd>municípios atendidos</dd></div>
+                        <div><dt id="num-encomendas">0</dt><dd>encomenda aberta</dd></div>
+                    </dl>
+                </div>
+            </div>
+
+            <section class="secao perfis">
+                <div class="container">
+                    <div class="titulo-secao">
+                        <span class="sobretitulo">Para quem é</span>
+                        <h2>Uma conta, três jeitos de usar</h2>
+                    </div>
+                    <div class="grade-perfis">
+                        <article class="perfil perfil-produtor">
+                            <span class="perfil-rotulo">01 · Produtor</span>
+                            <h3>Abra sua vitrine e venda o que colheu</h3>
+                            <p>Publique produtos com preço de varejo e de atacado, defina quantidade mínima e escolha onde entrega. Receba propostas e decida se aceita.</p>
+                            <a href="#" class="perfil-link" data-pagina="cadastrar" data-tipo="produtor">Cadastrar como produtor →</a>
+                        </article>
+                        <article class="perfil perfil-comercio">
+                            <span class="perfil-rotulo">02 · Comércio</span>
+                            <h3>Fornecedor da região, com preço de loja</h3>
+                            <p>Mercados e restaurantes veem preços de atacado e publicam encomendas recorrentes — como 300 maços de alface toda semana.</p>
+                            <a href="#" class="perfil-link" data-pagina="cadastrar" data-tipo="comercio">Cadastrar meu comércio →</a>
+                        </article>
+                        <article class="perfil perfil-consumidor">
+                            <span class="perfil-rotulo">03 · Consumidor</span>
+                            <h3>Compre para casa, direto de quem planta</h3>
+                            <p>Ovos caipira, queijo artesanal, café torrado na fazenda. Combine retirada ou entrega com o próprio produtor.</p>
+                            <a href="#" class="perfil-link" data-pagina="produtos">Ver produtos →</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secao produtos">
+                <div class="container">
+                    <div class="cabecalho-secao">
+                        <div>
+                            <span class="sobretitulo">Colhido esta semana</span>
+                            <h2>Produtos recentes perto de Uberaba/MG</h2>
+                        </div>
+                        <a href="#" class="link-ver-todos" data-pagina="produtos">Ver todos →</a>
+                    </div>
+                    <div class="grade-produtos" id="produtos-destaque"></div>
+                </div>
+            </section>
+
+            <section class="secao como-funciona">
+                <div class="container como-grade">
+                    <div class="titulo-secao">
+                        <span class="sobretitulo">Como funciona</span>
+                        <h2>Da conta criada ao negócio fechado em três passos</h2>
+                        <p>Sem taxa, sem intermediário. A plataforma aproxima — quem compra e quem vende combinam o resto.</p>
+                    </div>
+                    <ol class="passos">
+                        <li class="passo">
+                            <div class="numero-passo">1</div>
+                            <div>
+                                <h3>Crie sua conta</h3>
+                                <p>Escolha se você é produtor, comércio ou consumidor. Em segundos você já navega e negocia.</p>
+                            </div>
+                        </li>
+                        <li class="passo">
+                            <div class="numero-passo">2</div>
+                            <div>
+                                <h3>Encontre ou cadastre</h3>
+                                <p>Produtores abrem vitrine. Compradores buscam por região. Lojas publicam encomendas.</p>
+                            </div>
+                        </li>
+                        <li class="passo">
+                            <div class="numero-passo">3</div>
+                            <div>
+                                <h3>Proponha e feche direto</h3>
+                                <p>Faça sua oferta. O produtor aceita ou recusa. Combinam pagamento e entrega diretamente.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="secao chamada">
+                <div class="container">
+                    <div class="caixa-chamada">
+                        <h2>Tem produto parado no sítio ou falta fornecedor na loja?</h2>
+                        <div class="hero-botoes">
+                            <a href="#" class="btn btn-claro btn-grande" data-pagina="cadastrar">Criar conta grátis</a>
+                            <a href="#" class="btn btn-contorno-claro btn-grande" data-pagina="encomendas">Ver encomendas abertas</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="secao aviso">
+                <div class="container">
+                    <div class="caixa-aviso">
+                        <h3>Projeto acadêmico — demonstração</h3>
+                        <p>O AgroEncomenda <strong>não vende produtos, não intermedia pagamentos e não faz entregas</strong>. Tudo aqui é simulação de um sistema real — Trabalho A3 de Projeto e Engenharia de Software.</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- PÁGINA PRODUTOS -->
+        <section class="pagina" id="pagina-produtos">
+            <div class="container">
+                <div class="cabecalho-secao">
+                    <h2>Produtos — mais perto de Uberaba/MG</h2>
+                    <div class="acoes-cabecalho">
+                        <button class="btn btn-secundario btn-pequeno" id="btn-simular-compra">Simular uma compra</button>
+                        <button class="btn btn-terciario btn-pequeno" id="filtro-precos">Ver preços de consumidor</button>
+                    </div>
+                </div>
+                <div class="grade-produtos" id="lista-produtos"></div>
+            </div>
+        </section>
+
+        <!-- PÁGINA PRODUTO DETALHE -->
+        <section class="pagina" id="pagina-produto">
+            <div class="container" id="detalhe-produto"></div>
+        </section>
+
+        <!-- PÁGINA PRODUTORES -->
+        <section class="pagina" id="pagina-produtores">
+            <div class="container">
+                <h2>Produtores perto de você</h2>
+                <div class="grade-produtores" id="lista-produtores"></div>
+            </div>
+        </section>
+
+        <!-- PÁGINA ENCOMENDAS -->
+        <section class="pagina" id="pagina-encomendas">
+            <div class="container">
+                <div class="cabecalho-secao">
+                    <h2>Encomendas Abertas</h2>
+                    <button class="btn btn-primario btn-pequeno" id="btn-nova-encomenda">+ Publicar Encomenda</button>
+                </div>
+                <div id="lista-encomendas"></div>
+            </div>
+        </section>
+
+        <!-- PÁGINA CADASTRO -->
+        <section class="pagina" id="pagina-cadastrar">
+            <div class="container form-container">
+                <h2>Criar conta</h2>
+                <p class="subtitulo-form">Uma conta serve para vender, comprar para o comércio ou para consumo. Preencha com dados fictícios — é só demonstração.</p>
+                <form id="form-cadastro" class="formulario">
+                    <label>Seu nome *</label>
+                    <input type="text" id="cad-nome" required placeholder="Ex: Maria Souza">
+                    
+                    <label>E-mail *</label>
+                    <input type="email" id="cad-email" required placeholder="Ex: maria@exemplo.com">
+                    
+                    <label>Você é</label>
+                    <div class="grupo-radio">
+                        <label class="radio-label"><input type="radio" name="tipo-pessoa" value="consumidor" checked> Pessoa física / Consumidor</label>
+                        <label class="radio-label"><input type="radio" name="tipo-pessoa" value="produtor"> Produtor</label>
+                        <label class="radio-label"><input type="radio" name="tipo-pessoa" value="comercio"> Comércio / Loja</label>
+                    </div>
+                    
+                    <label>Município</label>
+                    <input type="text" id="cad-cidade" placeholder="Ex: Uberaba/MG" value="Uberaba/MG">
+                    
+                    <label>Senha * <span class="dica">(mínimo 8 caracteres)</span></label>
+                    <input type="password" id="cad-senha" required placeholder="Crie uma senha">
+                    
+                    <label>Repita a senha *</label>
+                    <input type="password" id="cad-senha2" required placeholder="Digite novamente">
+                    
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="cad-termos" required>
+                        Li e aceito os Termos de Uso e a Política de Privacidade
+                    </label>
+                    
+                    <button type="submit" class="btn btn-primario btn-grande">Criar conta</button>
+                </form>
+                <p class="link-abaixo">Já tem conta? <a href="#" data-pagina="entrar">Entrar</a></p>
+            </div>
+        </section>
+
+        <!-- PÁGINA ENTRAR -->
+        <section class="pagina" id="pagina-entrar">
+            <div class="container form-container">
+                <h2>Entrar</h2>
+                <form id="form-entrar" class="formulario">
+                    <label>E-mail</label>
+                    <input type="email" id="entrar-email" required placeholder="seu@email.com">
+                    
+                    <label>Senha</label>
+                    <input type="password" id="entrar-senha" required placeholder="Sua senha">
+                    
+                    <button type="submit" class="btn btn-primario btn-grande">Entrar</button>
+                </form>
+                <p class="link-abaixo">Esqueceu a senha? <a href="#">Recuperar</a> · Não tem conta? <a href="#" data-pagina="cadastrar">Criar conta</a></p>
+            </div>
+        </section>
+
+        <!-- PÁGINA PAINEL -->
+        <section class="pagina" id="pagina-painel">
+            <div class="container">
+                <h2 id="saudacao-usuario">Olá!</h2>
+                <div class="grade-painel">
+                    <div class="card-painel">
+                        <h3>Minha Conta</h3>
+                        <div id="dados-painel"></div>
+                        <button class="btn btn-secundario" id="btn-sair">Sair da conta</button>
+                    </div>
+                    <div class="card-painel">
+                        <h3>Ações Rápidas</h3>
+                        <div id="acoes-painel"></div>
+                    </div>
+                    <div class="card-painel">
+                        <h3>Meus Pedidos & Propostas</h3>
+                        <div id="minhas-propostas"></div>
+                    </div>
+                    <div class="card-painel">
+                        <h3>Minhas Perguntas</h3>
+                        <div id="minhas-perguntas"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PÁGINA VITRINE DO PRODUTOR -->
+        <section class="pagina" id="pagina-vitrine">
+            <div class="container" id="conteudo-vitrine"></div>
+        </section>
+
+        <!-- PÁGINA PERGUNTAR AO PRODUTOR -->
+        <section class="pagina" id="pagina-pergunta">
+            <div class="container form-container">
+                <h2>Perguntar ao produtor</h2>
+                <p class="subtitulo-form" id="resumo-pergunta"></p>
+                <form id="form-pergunta" class="formulario">
+                    <label for="pergunta-assunto">Sobre o quê?</label>
+                    <select id="pergunta-assunto"></select>
+
+                    <label for="pergunta-texto">Sua pergunta *</label>
+                    <textarea id="pergunta-texto" rows="4" required minlength="5" placeholder="Ex: Vocês entregam no centro de Uberaba aos sábados?"></textarea>
+
+                    <button type="submit" class="btn btn-primario btn-grande">Enviar pergunta</button>
+                </form>
+                <p class="link-abaixo"><a href="#" id="voltar-pergunta">← Voltar</a></p>
+            </div>
+        </section>
+
+        <!-- PÁGINA FAZER PEDIDO -->
+        <section class="pagina" id="pagina-pedido">
+            <div class="container form-container">
+                <h2>Fazer pedido</h2>
+                <p class="subtitulo-form" id="resumo-pedido"></p>
+                <form id="form-pedido" class="formulario" novalidate>
+                    <label for="pedido-quant">Quantidade desejada * <span class="dica" id="dica-quant"></span></label>
+                    <input type="number" id="pedido-quant" step="1" min="1" required placeholder="Ex: 5">
+
+                    <label for="pedido-valor">Valor que você oferece por unidade (R$) <span class="dica">— pode negociar</span></label>
+                    <input type="number" id="pedido-valor" step="0.01" min="0.01" required>
+
+                    <label for="pedido-data">Data desejada para entrega/retirada *</label>
+                    <input type="date" id="pedido-data" required>
+
+                    <label for="pedido-transporte">Transporte</label>
+                    <select id="pedido-transporte">
+                        <option value="Comprador retira">Comprador retira</option>
+                        <option value="Vendedor entrega">Vendedor entrega</option>
+                        <option value="A combinar">A combinar</option>
+                    </select>
+
+                    <label for="pedido-pagamento">Pagamento (combinado direto com o produtor)</label>
+                    <select id="pedido-pagamento">
+                        <option>Pix</option>
+                        <option>Dinheiro na entrega</option>
+                        <option>Cartão na entrega</option>
+                    </select>
+
+                    <label for="pedido-obs">Observações</label>
+                    <textarea id="pedido-obs" rows="3" placeholder="Ex: Entrega às segundas pela manhã..."></textarea>
+
+                    <div class="resumo-total" id="resumo-total" aria-live="polite"></div>
+                    <p class="erro-form" id="erro-pedido" role="alert"></p>
+
+                    <button type="submit" class="btn btn-primario btn-grande">Enviar proposta</button>
+                </form>
+                <p class="link-abaixo"><a href="#" data-pagina="produto">← Voltar ao produto</a></p>
+            </div>
+        </section>
+
+        <!-- PÁGINA PROPOSTA PARA ENCOMENDA -->
+        <section class="pagina" id="pagina-proposta-encomenda">
+            <div class="container form-container">
+                <h2>Enviar proposta</h2>
+                <p class="subtitulo-form" id="resumo-encomenda"></p>
+                <form id="form-proposta-encomenda" class="formulario" novalidate>
+                    <label for="enc-valor">Seu preço por unidade (R$) *</label>
+                    <input type="number" id="enc-valor" step="0.01" min="0.01" required placeholder="Ex: 2,40">
+
+                    <label for="enc-quant">Quantidade que você consegue fornecer * <span class="dica" id="dica-enc-quant"></span></label>
+                    <input type="number" id="enc-quant" step="1" min="1" required>
+
+                    <label for="enc-data">Primeira entrega em *</label>
+                    <input type="date" id="enc-data" required>
+
+                    <label for="enc-msg">Mensagem para o comprador</label>
+                    <textarea id="enc-msg" rows="3" placeholder="Ex: Colho na madrugada e entrego até 7h."></textarea>
+
+                    <div class="resumo-total" id="resumo-total-enc" aria-live="polite"></div>
+                    <p class="erro-form" id="erro-encomenda" role="alert"></p>
+
+                    <button type="submit" class="btn btn-primario btn-grande">Enviar proposta</button>
+                </form>
+                <p class="link-abaixo"><a href="#" data-pagina="encomendas">← Voltar às encomendas</a></p>
+            </div>
+        </section>
+
+        <!-- MODAL MENSAGEM -->
+        <div id="modal-mensagem" class="modal oculto">
+            <div class="modal-conteudo">
+                <h3 id="modal-titulo"></h3>
+                <p id="modal-texto"></p>
+                <button class="btn btn-primario" id="modal-fechar">Entendido</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="avisos-toast" id="avisos-toast" aria-live="polite"></div>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container">
+            <p class="rodape-marca">Agro<span>Encomenda</span></p>
+            <p class="rodape-texto">Projeto acadêmico · Demonstração · Uberaba/MG</p>
+            <div class="links-rodape">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Código no GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
