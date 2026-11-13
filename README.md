@@ -212,6 +212,15 @@ Repositório principal do projeto: [templaspreguissa/AgroEncomenda](https://gith
 
 Contexto acadêmico: **Trabalho A3 de Projeto e Engenharia de Software**.
 
+### Integrantes da equipe
+
+| Nome completo | RA |
+| --- | --- |
+| João Augusto | 32614169 |
+| Arthur Kyldare | 326126974 |
+| Sophia Dionisio | 326214807 |
+| Mateus Henrique Silva Dutra | 326125906 |
+
 ## Licença
 
 Distribuído sob a [licença MIT](LICENSE).
